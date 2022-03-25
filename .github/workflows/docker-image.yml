@@ -9,12 +9,14 @@ on:
 jobs:
 
   build:
-
+    defaults:
+      run:
+        working-directory: dart_project
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: ls
-      run: ls channel-sender/
+      run: ls 
     - name: Build the Docker image
-      run: docker build . --file channel-sender/Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --tag my-image-name:$(date +%s)
