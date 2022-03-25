@@ -23,4 +23,4 @@ jobs:
       - name: ls
         run: ls
       - name: Docker Build Multiplatform
-        run: docker buildx build --platform linux/arm64,linux/amd64 -t bancolombia/async-dataflow-channel-sender:${GITHUB_REF##*/} --push /Dockerfile.
+        run: docker buildx build --platform linux/arm64,linux/amd64 -t bancolombia/async-dataflow-channel-sender:${GITHUB_REF##*/} --push .
