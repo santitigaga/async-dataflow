@@ -11,7 +11,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: dart_project
+        working-directory: channel-sender
     runs-on: ubuntu-latest
 
     steps:
