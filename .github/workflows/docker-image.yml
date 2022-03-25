@@ -20,5 +20,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
       - name: Config Builder
         run: docker buildx create --name mbuilder && docker buildx use mbuilder
+      - name: ls
+        run: ls
       - name: Docker Build Multiplatform
         run: docker buildx build --platform linux/arm64,linux/amd64 -t bancolombia/async-dataflow-channel-sender:${GITHUB_REF##*/} --push /Dockerfile.
